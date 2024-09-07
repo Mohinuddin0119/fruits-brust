@@ -3,9 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fruits brust</title>
+    <!-- tailwind and daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d5186fcd93.js" crossorigin="anonymous"></script>
+    <!-- custom color -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'primary-color':'#F85559',
+                'secondary-color':'#FFFFFF'
+              }
+            }
+          }
+        }
+      </script>
 </head>
-<body>
-    
+<body class="bg-white">
+    <header class="container mx-auto">
+        <nav class="py-10 mx-4 lg:w-[1440px]">
+            <div class="navbar text-secondary-color bg-primary-color rounded-full">
+                <div class="navbar  md:gap-96 lg:gap-2">
+                    <!-- first part -->
+                    <div class="">
+                      <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4 6h16M4 12h8m-8 6h16" />
+                          </svg>
+                        </div>
+                        <ul
+                          tabindex="0"
+                          class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                          <li><a>Home</a></li>
+                          <li>
+                            <a>About Us</a>
+                          </li>
+                          <li><a>Shop</a></li>
+                          <li><a>All Fruits</a></li>
+                          <div class="navbar-end">
+                            <button class=" ">
+                                <input type="search" class="bg-secondary-color px-3 py-2 rounded-2xl " placeholder="Search here" name="" id=""
+                                >
+                            </button>
+                        </div>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="navbar-start hidden lg:block ">
+                      <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li>
+                          <a>About Us</a>
+                        </li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                      </ul>
+                    </div>
+                    <!-- second part -->
+                    <div class="navbar-center gap-3">
+                        <div>
+                            <img class="w-12" src="./images/logo.png" alt="">
+                        </div>
+                        <h2 class="text-3xl font-bold">Fruit Burst</h2>
+                    </div>
+                    <!-- third part -->
+                    <div class="navbar-end ">
+                        <button class="hidden lg:block ">
+                            <input type="search" class="bg-secondary-color px-3 py-2 rounded-2xl " placeholder="Search here" name="" id=""
+                            >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mx-auto">
+        <section class="">
+            <div
+                class=" hero w-[1440px] h-[600px] bg-contain bg-no-repeat"
+                    style="background-image: url(./images/banner4.png);">
+                <div class="hero-overlay"></div>
+                <div class="hero-content text-neutral-content text-center">
+                <div class="">
+                    <h1 class="mb-3 md:text-4xl lg:text-7xl font-bold text-secondary-color text-center">Exotic tastes at your <br> doorstep</h1>
+                    <p class="mb-5 text-xl text-secondary-color">
+                        We supply highly quality organic products
+                    </p>
+                    <button class="btn bg-primary-color text-secondary-color border-none">Shop Now</button>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
