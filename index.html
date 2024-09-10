@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruits brust</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <!-- tailwind and daisyui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- --icons-cdn--- -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/d5186fcd93.js" crossorigin="anonymous"></script>
+
+    <!-- lato font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <!-- custom color -->
     <script>
         tailwind.config = {
@@ -23,156 +33,230 @@
           }
         }
       </script>
+      <style>
+        .lato-regular {
+            font-family: "Lato", sans-serif;
+        }
+
+      </style>
 </head>
-<body class="bg-white">
-    <header class="container mx-auto">
-        <nav class="py-10 mx-4 lg:w-[1440px]">
-            <div class="navbar text-secondary-color bg-primary-color rounded-full">
-                <div class="navbar  md:gap-96 lg:gap-2">
-                    <!-- first part -->
-                    <div class="">
-                      <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M4 6h16M4 12h8m-8 6h16" />
-                          </svg>
-                        </div>
-                        <ul
-                          tabindex="0"
-                          class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                          <li><a>Home</a></li>
-                          <li>
-                            <a>About Us</a>
-                          </li>
-                          <li><a>Shop</a></li>
-                          <li><a>All Fruits</a></li>
-                          <div class="navbar-end">
-                            <button class=" ">
-                                <input type="search" class="bg-secondary-color px-3 py-2 rounded-2xl " placeholder="Search here" name="" id=""
-                                >
-                            </button>
-                        </div>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="navbar-start hidden lg:block ">
-                      <ul class="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        <li>
-                          <a>About Us</a>
-                        </li>
-                        <li><a>Shop</a></li>
-                        <li><a>All Fruits</a></li>
-                      </ul>
-                    </div>
-                    <!-- second part -->
-                    <div class="navbar-center gap-3">
-                        <div>
-                            <img class="w-12" src="./images/logo.png" alt="">
-                        </div>
-                        <h2 class="text-3xl font-bold">Fruit Burst</h2>
-                    </div>
-                    <!-- third part -->
-                    <div class="navbar-end ">
-                        <button class="hidden lg:block ">
-                            <input type="search" class="bg-secondary-color px-3 py-2 rounded-2xl " placeholder="Search here" name="" id=""
-                            >
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                </div>
+<body class="bg-white lato-regular">
+    <!-- ---header-section-start--- -->
+    <header class="w-full lg:px-20 px-5 pt-2" id="Home">
+      <nav
+          class=" py-4 flex justify-between items-center md:bg-[#F85559] bg-inherit  text-[#FFF] rounded-3xl px-4">
+          <ul class="md:flex space-x-2 px-2 hidden ">
+              <li><a href="#Home" class="text-base font-medium hover:text-black duration-500 ">Home</a></li>
+              <li><a href="#Aboutus" class="text-base font-medium hover:text-black duration-500 ">About Us</a></li>
+              <li><a href="#shop" class="text-base font-medium hover:text-black duration-500 ">Shop</a></li>
+              <li><a href="" class="text-base font-medium hover:text-black duration-500 ">All Fruits</a></li>
+          </ul>
+          <h1 class="flex text-3xl font-medium items-center text-black md:text-[#FFF]"><img src="./images/logo.png"
+                  alt="logo" class="w-12 pr-2 ">Fruit Burst</h1>
+          <form action="#" class="hidden w-[250px] rounded-xl md:flex items-center bg-[#FFF]">
+              <input
+                  class="placeholder:text-gray-400 outline-none border-none text-gray-500 py-2 px-2 bg-transparent "
+                  type="text" placeholder="search here">
+              <button class=" text-gray-800 text-xl flex justify-center  w-full py-2 rounded-lg "><ion-icon
+                      name="search-outline"></ion-icon></button>
+          </form>
+          <button class="md:hidden flex items-center text-black my-auto">
+              <ion-icon name="menu-outline" class="text-4xl cursor-pointer"></ion-icon>
+          </button>
+      </nav>
+      <!-- banner-section -->
+      <section class="py-8">
+          <div class="carousel w-full rounded-md h-[500px]">
+              <!-- ---sider-one-- -->
+              <div id="slide1" class="carousel-item relative w-full">
+                  <div
+                      class="bg-[#000000b3] bg-blend-darken bg-[url('./images/banner1.png')] w-full flex items-center justify-center flex-col">
+                      <h3 class=" text-2xl md:text-6xl text-[#FFF] font-extrabold text-center">Exotic tastes at your
+                          <br>
+                          doorstep
+                      </h3>
+                      <p class=" md:text-start text-center text-base md:text-xl text-[#FFF] font-medium py-4 ">
+                          We supply highly quality organic products
+                      </p>
+                      <button class="btn bg-[#F85559]  border-2 border-red-500 text-white font-bold border-none hover:bg-[#F85559]
+                           hover:bg-inherit">
+                          Shop Now
+                      </button>
+
+                  </div>
+                  <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 md:top-1/2 top-[60%]">
+                      <a href="#slide4" class="btn btn-circle text-xl">
+                          <ion-icon name="arrow-back-outline"></ion-icon>
+                      </a>
+                      <a href="#slide2" class="btn btn-circle  text-xl">
+                          <ion-icon name="arrow-forward-outline"></ion-icon>
+                      </a>
+                  </div>
+              </div>
+
+              <!-- ---sider-two-- -->
+              <div id="slide2" class="carousel-item relative w-full">
+                  <div
+                      class="bg-[#000000b3] bg-blend-darken bg-[url('./images/banner2.png')] w-full flex items-center justify-center flex-col">
+
+                      <h3 class="text-3xl md:text-6xl text-[#FFF] font-extrabold text-center">Fresh fruits good <br>
+                          for health </h3>
+                      <p class="md:text-start text-center text-base md:text-xl text-[#FFF] font-medium py-4 ">We
+                          supply highly quality organic products</p>
+                      <button class="btn bg-[#F85559] border-2 border-red-500 text-white font-bold border-none hover:bg-[#F85559]
+                       hover:bg-inherit
+                         ">Shop Now</button>
+
+                  </div>
+                  <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 md:top-1/2 top-[60%]">
+                      <a href="#slide1" class="btn btn-circle  text-xl">
+                          <ion-icon name="arrow-back-outline"></ion-icon>
+                      </a>
+                      <a href="#slide3" class="btn btn-circle  text-xl">
+                          <ion-icon name="arrow-forward-outline"></ion-icon>
+                      </a>
+                  </div>
+              </div>
+
+              <!-- ---sider-three-- -->
+              <div id="slide3" class="carousel-item relative w-full">
+                  <div
+                      class="bg-[#000000b3] bg-blend-darken bg-[url('./images/banner3.png')] w-full flex items-center justify-center flex-col">
+
+                      <h3 class=" text-2xl md:text-4xl text-[#FFF] font-extrabold text-center">fruits make our body
+                          <br>
+                          very healthy and fit
+                      </h3>
+                      <p class=" md:text-start text-center text-base md:text-xl text-[#FFF] font-medium py-4 ">We
+                          supply highly quality organic products</p>
+                      <button class="btn bg-[#F85559] border-2 border-red-500 text-white font-bold border-none hover:bg-[#F85559]
+                       hover:bg-inherit
+                         ">Shop Now</button>
+
+                  </div>
+                  <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 md:top-1/2 top-[60%]">
+                      <a href="#slide2" class="btn btn-circle  text-xl">
+                          <ion-icon name="arrow-back-outline"></ion-icon>
+                      </a>
+                      <a href="#slide4" class="btn btn-circle  text-xl">
+                          <ion-icon name="arrow-forward-outline"></ion-icon>
+                      </a>
+                  </div>
+              </div>
+              <!-- --slider-four-- -->
+              <div id="slide4" class="carousel-item relative w-full">
+                  <div
+                      class="bg-[#000000b3] bg-blend-darken bg-[url('./images/banner4.png')] w-full flex items-center justify-center flex-col">
+
+                      <h3 class=" text-2xl md:text-6xl text-[#FFF] font-extrabold text-center">Fruit means vitamins
+                          <br>
+                          and calcium
+                      </h3>
+                      <p class=" md:text-start text-center text-base md:text-xl text-[#FFF] font-medium py-4 ">We
+                          supply highly quality organic products</p>
+                      <button class="btn bg-[#F85559] border-2 border-red-500 text-white font-bold border-none hover:bg-[#F85559]
+                       hover:bg-inherit
+                         ">Shop Now</button>
+
+                  </div>
+                  <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 md:top-1/2 top-[60%]">
+                      <a href="#slide3" class="btn btn-circle  text-xl">
+                          <ion-icon name="arrow-back-outline"></ion-icon>
+                      </a>
+                      <a href="#slide1" class="btn btn-circle  text-xl">
+                          <ion-icon name="arrow-forward-outline"></ion-icon>
+                      </a>
+                  </div>
+              </div>
+          </div>
+
+
+          <!-- --fruits-iems-secttion-- -->
+          <div class="flex justify-center z-2 -mt-20  relative  ">
+
+              <div
+                  class="md:grid  grid-cols-5 hidden justify-center items-center text-center w-[90%] lg:w-4/5 shadow-xl px-4 py-4 rounded-xl  bg-white ">
+                  <div>
+                      <img src="./images/fruit1.png" alt="grapes image" class="w-[80%] mx-auto lg:w-full">
+                      <p>Grapes</p>
+                  </div>
+                  <div>
+                      <img src="./images/fruit2.png" alt="orange image " class="w-[80%] mx-auto lg:w-full">
+                      <p>Orange</p>
+                  </div>
+                  <div>
+                      <img src="./images/fruit3.png" alt=" mango image " class="w-[80%] mx-auto lg:w-full">
+                      <p>Mango</p>
+                  </div>
+                  <div>
+                      <img src="./images/fruit4.png" alt="strawberry image" class="w-[80%] mx-auto lg:w-full">
+                      <p>Strawberry</p>
+                  </div>
+                  <div>
+                      <img src="./images/fruit5.png" alt="Pomegranate image" class="w-[80%] mx-auto lg:w-full">
+                      <p>Pomegranate</p>
+                  </div>
+              </div>
+
+          </div>
+
+      </section>
+  </header>
+  <!-- ---header-section-end--- -->
+   <!-- main section start -->
+    <main class="my-14">
+        <section class="lg:px-20 px-5 lg:flex justify-between items-center space-y-5">
+            <div>
+                <h1 class="text-5xl font-extrabold text-black mb-3">Deal of the day</h1>
+                <p class="text-gray-500">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
-        </nav>
-    </header>
-    <main class="container mx-auto">
-        <section class="my-10 flex justify-center">
-            <!-- container -->
-            <div class="relative">
-                <div
-                class="hero w-[460px] md:w-[530px] lg:w-[1420px] lg:h-[600px] bg-contain bg-no-repeat"
-                style="background-image: url(./images/banner4.png);">
-                <div class="hero-overlay">
+            <div class="flex ">
+                <!-- days -->
+                <div class="flex mx-3">
+                    <div>
+                        <h3 class="text-2xl text-black font-extrabold">29</h3>
+                        <p class="text-black">Days</p>
+                    </div>
+                    <span class="flex  items-center" >
+                        <ion-icon class="text-black " name="ellipsis-vertical-outline"></ion-icon>
+                    </span>
                 </div>
-                <div class="hero-content text-neutral-content text-center">
-                    <div class="">
-                        <h1 class="mb-3 md:text-4xl lg:text-7xl font-bold text-secondary-color text-center">Exotic tastes at your <br> doorstep</h1>
-                    <p class="mb-5 text-xl text-secondary-color">
-                        We supply highly quality organic products
-                    </p>
-                    <button class="btn bg-primary-color text-secondary-color border-none">Shop Now</button>
+                <!-- hours -->
+                <div class="flex mx-3">
+                    <div>
+                        <h3 class="text-2xl text-black font-extrabold">15</h3>
+                        <p class="text-black">hours</p>
+                    </div>
+                    <span class="flex  items-center" >
+                        <ion-icon class="text-black " name="ellipsis-vertical-outline"></ion-icon>
+                    </span>
                 </div>
+                <!-- minutes -->
+                <div class="flex mx-3">
+                    <div>
+                        <h3 class="text-2xl text-black font-extrabold">25</h3>
+                        <p class="text-black">minutes</p>
+                    </div>
+                    <span class="flex  items-center" >
+                        <ion-icon class="text-black " name="ellipsis-vertical-outline"></ion-icon>
+                    </span>
                 </div>
-                </div>
-                <!-- fruit container -->
-                <div class="lg:absolute top-30 lg:top-[520px] left-28 grid md:grid-cols-3 lg:grid-cols-5 bg-white shadow-xl lg:w-[1190px] lg:h-[200px] p-5" >
-                    <!-- card 1 -->
-                    <div class="card card-compact ">
-                        <figure>
-                          <img
-                            src="./images/fruit1.png"
-                            alt="Shoes" />
-                        </figure>
-                        <div class="card-body">
-                          <h2 class="text-center text-black font-bold">Strawberry</h2>
-                        </div>
+                <!-- second -->
+                <div class="flex mx-3">
+                    <div>
+                        <h3 class="text-2xl text-black font-extrabold">08</h3>
+                        <p class="text-black">seconds</p>
                     </div>
-                    <!-- card 2 -->
-                    <div class="card  card-compact ">
-                        <figure>
-                          <img
-                            src="./images/fruit2.png"
-                            alt="Shoes" />
-                        </figure>
-                        <div class="card-body">
-                          <h2 class="text-center text-black font-bold">Orange</h2>
-                        </div>
-                    </div>
-                    <!-- card 3 -->
-                    <div class="card  card-compact ">
-                        <figure>
-                          <img
-                            src="./images/fruit3.png"
-                            alt="Shoes" />
-                        </figure>
-                        <div class="card-body">
-                          <h2 class="text-center text-black font-bold">Mango</h2>
-                        </div>
-                    </div>
-                    <!-- card 4 -->
-                    <div class="card card-compact ">
-                        <figure>
-                          <img
-                            src="./images/fruit4.png"
-                            alt="Shoes" />
-                        </figure>
-                        <div class="card-body">
-                          <h2 class="text-center text-black font-bold">Strawberry</h2>
-                        </div>
-                    </div>
-                    <!-- card 5 -->
-                    <div class="card  card-compact ">
-                        <figure>
-                          <img
-                            src="./images/fruit5.png"
-                            alt="Shoes" />
-                        </figure>
-                        <div class="card-body">
-                          <h2 class="text-center text-black font-bold">dalim</h2>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
     </main>
+    <!-- main section end -->
     <footer class="py-10">
         <h1>hell</h1>
     </footer>
